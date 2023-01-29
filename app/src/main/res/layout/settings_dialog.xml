@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/dialog_icons"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lay4"
+        android:layout_weight="0.5"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/profile_lay"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/curve_menu"
+                    android:layout_gravity="center"
+
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/customer"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Profile"
+                    android:textColor="@color/main"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:textSize="20sp"
+                    android:paddingBottom="5dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/history_lay"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:onClick="ontouching"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/curve_menu"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/time_history"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="History"
+                    android:textColor="@color/main"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:textSize="20sp"
+                    android:paddingBottom="5dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/password_edit_lay"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/curve_menu"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/password_lock"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Security"
+                    android:textColor="@color/main"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:textSize="20sp"
+                    android:paddingBottom="5dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/complaint_lay"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="105dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/curve_menu"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/complaint"
+                        android:textColor="@color/white"
+                        android:paddingBottom="5dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Complaint"
+                    android:textColor="@color/main"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:textSize="18sp"
+                    android:paddingBottom="5dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/curve_menu"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/policy"
+                        android:textColor="@color/white"
+                        android:paddingBottom="5dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/policies_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="policies"
+                    android:textColor="@color/main"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:textSize="20sp"
+                    android:paddingBottom="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/curve_menu"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/terms"
+                        android:textColor="@color/white"
+                        android:paddingBottom="5dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/terms_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="T_O_S"
+                    android:textColor="@color/main"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:textSize="20sp"
+                    android:paddingBottom="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/about_lay"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/curve_menu"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/info"
+                        android:textColor="@color/white"
+                        android:paddingBottom="5dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="About"
+                    android:textColor="@color/main"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:textSize="20sp"
+                    android:paddingBottom="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/logout"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/curve_menu"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/logout"
+                        android:backgroundTint="#E91E63"
+                        android:textColor="@color/white"
+                        android:paddingBottom="5dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Logout"
+                    android:textColor="@color/main"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:textSize="20sp"
+                    android:paddingBottom="5dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

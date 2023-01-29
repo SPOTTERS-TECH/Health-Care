@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/curve_dialog"
+    android:layout_height="match_parent">
+
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/apexlogo"
+            android:fontFamily="@font/roboto_condensed_light"
+            android:textColor="@color/main"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+        android:id="@+id/textvitals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vitals..."
+        android:layout_centerHorizontal="true"
+        android:paddingStart="20dp"
+        android:textColor="@color/main"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:fontFamily="@font/roboto_condensed_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/temperature"
+        android:layout_below="@id/textvitals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Temperature"
+        android:background="@drawable/input"
+        android:inputType="text"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/pulse"
+        android:layout_below="@id/temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Pulse"
+        android:background="@drawable/input"
+        android:inputType="text"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/respiration"
+        android:layout_below="@id/pulse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Respiration"
+        android:background="@drawable/input"
+        android:inputType="text"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/bloodpressure"
+        android:layout_below="@id/respiration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Blood Pressure"
+        android:background="@drawable/input"
+        android:inputType="text"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/PulseOximetry"
+        android:layout_below="@id/bloodpressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Pulse Oximetry"
+        android:background="@drawable/input"
+        android:inputType="text"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/pain"
+        android:layout_below="@id/PulseOximetry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Pain"
+        android:background="@drawable/input"
+        android:inputType="text"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/bloodsugar"
+        android:layout_below="@id/pain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Blood sugar"
+        android:background="@drawable/input"
+        android:inputType="text"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/main"
+        android:text="Submit"
+        android:layout_below="@id/bloodsugar"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="10dp" />
+    </RelativeLayout>
+
+</ScrollView>
+
+</RelativeLayout>

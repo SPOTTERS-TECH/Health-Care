@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    android:orientation="horizontal"
+    android:background="#34F0EAD6">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logout_menu"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textlogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Logging out?"
+                android:textStyle="bold"
+                android:textColor="@color/main"
+                android:textSize="23sp" />
+
+            <TextView
+                android:id="@+id/textsure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Are you sure you want to log out?"
+                android:layout_below="@id/textlogout"
+                android:fontFamily="@font/roboto_condensed_light"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/confirmlogoutbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:text="CONFIRM"
+                android:textStyle="bold"
+                android:textColor="@color/main"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cancel_logoutbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CANCEL"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/main"
+                android:layout_marginEnd="100dp"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/tophead"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#34F0EAD6">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_condensed_light"
+                android:text="Settings"
+                android:textColor="@color/main"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tophead">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/profile_img"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/ic_baseline_person_pin_24"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/settings_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_condensed_light"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="Samuel Akinyemi"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_condensed_light"
+                android:gravity="center"
+                android:text="Lagos"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                tools:ignore="HardcodedText" />
+
+
+
+            <!--            profile edit button-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/editprofilebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:fontFamily="@font/roboto_condensed_light"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@drawable/editshape"
+                android:text="Edit profile"
+                tools:ignore="HardcodedText" />
+
+            <!--            First option-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginTop="40dp"
+                android:layout_margin="20dp"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <!--                <RelativeLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content">-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="40dp"-->
+                <!--                        android:layout_height="40dp"-->
+                <!--                        android:background="@drawable/darkmode"-->
+                <!--                        android:padding="9dp"-->
+                <!--                        android:src="@drawable/moon"-->
+                <!--                        tools:ignore="ContentDescription" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:layout_marginStart="50dp"-->
+                <!--                        android:fontFamily="@font/roboto_condensed_light_italic"-->
+                <!--                        android:text="Dark Mode"-->
+                <!--                        android:textColor="@color/black"-->
+                <!--                        android:textSize="15sp"-->
+                <!--                        android:textStyle="bold"-->
+                <!--                        tools:ignore="HardcodedText" />-->
+
+                <!--                    <Switch-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignParentEnd="true"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        tools:ignore="UseSwitchCompatOrMaterialXml" />-->
+
+
+                <!--                </RelativeLayout>-->
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="9dp"
+                        android:src="@drawable/moon"
+                        android:background="@drawable/darkmode"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="50dp"
+                        android:fontFamily="@font/roboto_condensed_light"
+                        android:text="Fingerprint"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <Switch
+                        android:id="@+id/fingerprintswitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                    <ProgressBar
+                        android:id="@+id/load"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:visibility="invisible"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--            Second option-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/historybtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/body_input">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/darkmode"
+                        android:padding="9dp"
+                        android:src="@drawable/ic_baseline_history_24"
+                        tools:ignore="ContentDescription" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="50dp"
+                        android:fontFamily="@font/roboto_condensed_light"
+                        android:text="History"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/securitybtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/body_input">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_security_24"
+                        android:background="@drawable/darkmode"
+                        tools:ignore="ContentDescription"
+                        android:padding="9dp"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="50dp"
+                        android:fontFamily="@font/roboto_condensed_light"
+                        android:text="Security &amp; Privacy"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/complain"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/body_input">
+
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_mode_comment_24"
+                        android:background="@drawable/darkmode"
+                        tools:ignore="ContentDescription"
+                        android:padding="9dp"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="50dp"
+                        android:fontFamily="@font/roboto_condensed_light"
+                        android:text="Complaint"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="normal"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+            <!--            Third option-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:layout_marginBottom="90dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/about"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/body_input"
+                    android:padding="14dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_condensed_light"
+                        android:text="About"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/logout"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/body_input"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_baseline_logout_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_condensed_light"
+                        android:text="Log Out"
+                        android:textColor="#FF0000"
+                        android:textSize="22sp"
+                        android:layout_marginStart="35dp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomnavigation"
+            app:itemBackground="@color/white"
+            app:itemTextColor="@drawable/selector"
+            app:itemIconTint="@drawable/selector"
+            android:background="@drawable/curve"
+            app:menu="@menu/menu_navigation" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

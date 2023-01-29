@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".Splashscreen">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:tooltipText="heloo"
+        android:src="@drawable/healthbooktwo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_condensed_light"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="38dp"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/docicon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="13dp"
+        android:fontFamily="@font/alice"
+        android:text="Striving to improve community health care and practices"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/getstarteed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:text="Get started"
+        app:elevation="30dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginHorizontal="90dp"
+        app:cornerRadius="90px"
+        android:padding="20dp" />
+
+    <ImageView
+        android:id="@+id/docicon"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/getstarteed"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/doctoricon" />
+
+</RelativeLayout>

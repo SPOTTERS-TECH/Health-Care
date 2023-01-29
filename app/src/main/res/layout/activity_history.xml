@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".History">
+
+    <RelativeLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/black"
+            android:background="@drawable/ic_baseline_arrow_back_24"
+            android:onClick="backbtn" />
+
+        <ImageView
+            android:id="@+id/cancelvitals"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:visibility="invisible"
+            android:background="@drawable/close"
+            android:fontFamily="@font/roboto_condensed_light"
+            android:textColor="@color/main"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20sp"
+            android:fontFamily="@font/roboto_condensed_light"
+            android:text="History"
+            android:textColor="@color/main"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="All previous patients Request will appear here"
+        android:textSize="20sp"
+        android:paddingHorizontal="20dp"
+        android:fontFamily="@font/roboto_condensed_light"/>
+
+</RelativeLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#34F0EAD6"
+    tools:context=".Dasboard">
+
+    <RelativeLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/dateformat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_condensed_light"
+            android:text="Today, 1 December"
+            android:textColor="@color/purple_200"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/notificationicon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/notification"
+            app:tint="@color/main" />
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/lay2"
+            android:layout_below="@id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/hihand" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/greet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="58dp"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:text="Good morning,"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/users_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="58dp"
+                    android:layout_below="@+id/greet"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:text="Jake"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    <TextView
+        android:id="@+id/numofappointment"
+        android:layout_below="@id/lay2"
+        android:paddingStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="You have 3 appointments today"/>
+
+    <RelativeLayout
+        android:id="@+id/lay3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/numofappointment"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dashbackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/usericon" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/nameofpatient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="78dp"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:text="Mr. John Cooper"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/timeforpatient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="78dp"
+                    android:layout_below="@+id/nameofpatient"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:text="Today, 09:00AM"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/lay3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_above="@id/bottomcard"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Future Appointment"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview2"
+            android:layout_below="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomnavigation"
+            app:itemBackground="@color/white"
+            android:padding="7dp"
+            app:itemTextColor="@drawable/selector"
+            app:itemIconTint="@drawable/selector"
+            android:background="@drawable/curve"
+            app:menu="@menu/menu_navigation" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
